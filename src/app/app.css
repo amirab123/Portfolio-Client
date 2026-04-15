@@ -1,0 +1,39 @@
+
+main {
+  padding: 30px 20px;
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(180deg, #f0fdf4, #ffffff); 
+  transition: background 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #2e7d32, #81c784); 
+  color: #ffffff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 20px rgba(46, 125, 50, 0.3);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+footer:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, #1b5e20, #66bb6a);
+}
+
+
+footer a {
+  color: #c8e6c9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,132 @@
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #e8f5e9, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(46, 125, 50, 0.3);
+}
+
+h2 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input.ng-touched.ng-valid {
+  border-color: #10b981; 
+  background: #ecfdf5;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #ef4444; 
+  background: #fef2f2;
+}
+
+
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2e7d32;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1b5e20;
+  transform: scale(1.03);
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e53935 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.success {
+  color: #2e7d32 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+p {
+  text-align: center;
+  margin-top: 1rem;
+  color: #296233; 
+  font-size: 0.95rem;
+  user-select: none;
+  
+}
+a {
+  color: #2e7d32; 
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+  }
+a:hover {
+  color: #71cd94; 
+  text-decoration: underline;
+  transform: scale(1.05);
+      }
+
+p a:hover {
+  text-decoration: underline;
+  color: #117136; 
+  transform: scale(1.05);
+}
+span {
+  color: #ef4444; 
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,129 @@
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, #2e7d32, hsl(123, 38%, 64%));
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+    border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #b9f6ca;
+}
+
+/* NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #a5d6a7; 
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+.active {
+  color: #81c784 !important; 
+}
+
+
+button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+
+  button {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(46, 125, 50, 0.95); 
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  nav.open {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

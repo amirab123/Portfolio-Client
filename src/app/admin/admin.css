@@ -1,0 +1,162 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.user-info {
+  background: linear-gradient(145deg, #2e7d32, hsl(123, 38%, 64%));
+  color: #fff;              
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.user-info span {
+  background: rgba(255,255,255,0.2); 
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.user-info:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transform: translateY(-2px);  
+}
+
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.admin-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8a3dc8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #a04550;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card h3 {
+  margin: 0;
+  color: #333;
+}
+.ajouter-btn {
+  background: linear-gradient(145deg, #2e7d32, hsl(123, 38%, 64%));
+}
+.ajouter-btn:hover {
+  background: linear-gradient(145deg, #113313, #a4dea7);
+  
+
+}
+
+.supprimer-btn {
+  background: linear-gradient(145deg, #c83d8e, #a04550);
+}
+.supprimer-btn:hover {
+  background: linear-gradient(145deg, #a04550, #c83da5);
+
+}
+
+.accomplishments {
+  
+  color: #1eaf51;              
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+
+.accomplishments:hover {
+  background: #fafbfc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}

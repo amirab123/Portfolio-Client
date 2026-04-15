@@ -1,0 +1,51 @@
+<div class="admin-container">
+  <h1>Administration des Accomplissements</h1>
+
+  
+<div class="user-info" *ngIf="currentUserName">
+  Connecté en tant que : <strong>{{ currentUserName }}</strong> 
+  <span *ngIf="currentUserRole.toLowerCase() === 'admin'">(Admin)</span>
+</div>
+<br>
+<div class="accomplishments">
+  Nombre d'accomplissements : <strong>{{ accomplissements.length }}</strong>
+</div>
+
+
+  <div *ngIf="accomplissements.length > 0; else loading" class="grid">
+    <div class="card" *ngFor="let a of accomplissements">
+      <h3>{{ a.nom }}</h3>
+      <p class="type">{{ a.typeAccomplissement }}</p>
+      <p class="date">{{ a.dateRealisation }}</p>
+      <p class="tech" *ngIf="a.technologie">Technologie : {{ a.technologie }}</p>
+      <p class="description" *ngIf="a.description">{{ a.description }}</p>
+      <button (click)="deleteAccomplissement(a.id)" class="supprimer-btn">Supprimer</button>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p>Chargement des accomplissements...</p>
+  </ng-template>
+
+  <hr>
+
+  <h2>Ajouter un nouvel accomplissement</h2>
+  <form [formGroup]="form" (ngSubmit)="addAccomplissement()">
+    <label>Nom :</label>
+    <input formControlName="nom" type="text">
+
+    <label>Type :</label>
+    <input formControlName="typeAccomplissement" type="text">
+
+    <label>Date :</label>
+    <input formControlName="dateRealisation" type="date">
+
+    <label>Technologie :</label>
+    <input formControlName="technologie" type="text">
+
+    <label>Description :</label>
+    <textarea formControlName="description"></textarea>
+
+    <button type="submit"   class="ajouter-btn" >Ajouter</button>
+  </form>
+</div>

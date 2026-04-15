@@ -1,0 +1,36 @@
+<header>
+  <div class="header-container">
+    <h1>{{ 'Mon Portfolio' }}</h1>
+
+ 
+    <button type="button" (click)="toggleMenu()">☰ </button>
+
+    <nav [class.open]="menuOpen">
+      <ul>
+      
+        <li><a routerLink="/accueil" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Accueil</a></li>
+
+     
+        <li >
+          <a routerLink="/accomplissements" routerLinkActive="active">Accomplissements</a>
+        </li>
+
+     
+        <li *ngIf="userService.isAdmin()">
+          <a routerLink="/admin" routerLinkActive="active">Administrateur </a>
+          <span class="username">({{ userService.getUsername() }})</span>
+        </li>
+
+
+<li *ngIf="!userService.isLoggedIn()"><a routerLink="/login" routerLinkActive="active">Connexion</a></li>
+<li *ngIf="!userService.isLoggedIn()"><a routerLink="/register" routerLinkActive="active">Inscription</a></li>
+
+
+   
+        <li *ngIf="userService.isLoggedIn()">
+          <a (click)="logout()">Déconnexion</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

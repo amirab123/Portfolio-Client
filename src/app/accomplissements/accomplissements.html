@@ -1,0 +1,35 @@
+<h1 class="title">Accomplissements</h1>
+
+<div class="container">
+  <div class="grid">
+
+    <div class="accomplissement-card" *ngFor="let a of accomplissements">
+
+
+      <h3>{{ a.nom }}</h3>
+
+      <p class="type">{{ a.typeAccomplissement }}</p>
+      <p class="date">{{ a.dateRealisation | date:'mediumDate' }}</p>
+
+      <p class="tech" *ngIf="a.technologie">
+        Technologie : {{ a.technologie }}
+      </p>
+
+
+<button class="toggle-btn" (click)="toggleDescription(a.id)">
+  <span>{{ isDescriptionOpen(a.id) ? 'Masquer' : 'Afficher' }} les détails</span>
+  <span class="icon">{{ isDescriptionOpen(a.id) ? '−' : '+' }}</span>
+
+</button>
+
+<p>
+  <span *ngIf="isDescriptionOpen(a.id)">{{ a.description }}</span>
+</p>
+
+
+    </div>
+
+  </div>
+</div>
+
+<hr>
