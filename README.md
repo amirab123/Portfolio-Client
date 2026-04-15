@@ -1,63 +1,55 @@
 
-# PortfolioAngular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
 # Portfolio-Client
+Description du projet
+
+Ce projet est une application web complète basée sur une architecture Full Stack moderne.
+Il combine un frontend dynamique développé avec Angular et un backend robuste construit avec Spring Boot, exposant des API REST.
+
+🚀 Technologies utilisées
+🔹 Frontend
+Angular
+HTML5 / CSS3
+TypeScript
+Responsive Design
+🔹 Backend
+Spring Boot
+API REST
+Spring Data JPA
+MySQL
+⚙️ Fonctionnalités principales
+🔐 Gestion des utilisateurs (CRUD)
+🔄 Communication via API REST
+📊 Gestion des données avec MySQL
+🔎 Affichage dynamique des données
+📱 Interface responsive et moderne
+🏗️ Architecture
+Frontend (Angular) → consomme les API REST
+Backend (Spring Boot) → logique métier + accès base de données
+Base de données → MySQL avec JPA (ORM)
+🔗 Communication
+
+Le frontend Angular communique avec le backend via des requêtes HTTP (GET, POST, PUT, DELETE) pour manipuler les données en temps réel.
+
+🎯 Objectif
+
+Ce projet vise à démontrer :
+
+la maîtrise du développement Full Stack
+l’intégration Angular + Spring Boot
+la création et consommation d’API REST
+la gestion d’une base de données relationnelle avec JPA
+📷 Aperçu
+
+
+<img width="1871" height="827" alt="image" src="https://github.com/user-attachments/assets/cb6e3cd7-21c7-4557-a1d2-68b9a31f913f" />
+<img width="1819" height="883" alt="image" src="https://github.com/user-attachments/assets/80d86e2e-ff4d-4c05-92f7-3db8be49d5e0" />
+
+
+💡 Améliorations possibles
+Authentification JWT
+Pagination et filtrage avancé
+Déploiement (Docker / Cloud)
+
+
 
